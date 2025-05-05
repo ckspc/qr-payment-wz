@@ -5,7 +5,6 @@ import Image from "next/image"
 import { useState, ChangeEvent } from "react"
 import axios from "axios"
 import { useRouter } from "next/navigation"
-import Link from "next/link"
 
 const Home: NextPage = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
@@ -48,7 +47,7 @@ const Home: NextPage = () => {
           success ? "success" : "error"
         }&message=${encodeURIComponent(message)}`
       )
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       const errorMessage =
         "เกิดข้อผิดพลาดในการเรียก API: " +
@@ -174,14 +173,6 @@ const Home: NextPage = () => {
         </button>
 
         {/* Back Link */}
-        <div className="text-center mt-6">
-          <Link
-            href="/"
-            className="text-white text-lg underline hover:text-[#d22831] transition-colors duration-200 font-medium drop-shadow-md"
-          >
-            กลับสู่หน้าหลัก
-          </Link>
-        </div>
       </div>
     </div>
   )
