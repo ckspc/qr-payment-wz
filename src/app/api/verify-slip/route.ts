@@ -3,11 +3,9 @@ import axios from "axios";
 
 export async function POST(req: NextRequest) {
     try {
-        // Parse the multipart/form-data request
         const formData = await req.formData();
         const file = formData.get("file") as File | null;
 
-        // Check if a file was uploaded
         if (!file) {
             return NextResponse.json(
                 { message: "No file uploaded" },
