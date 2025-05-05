@@ -83,7 +83,7 @@ const Home: NextPage = () => {
         <div className="bg-[#b30009]/10 rounded-xl p-6 mb-6 border-2 border-[#b30009] shadow-inner">
           <div className="flex justify-center">
             <Image
-              src="/494887688_1411888273160433_2839512565933097529_n.jpg"
+              src="/qrcode.png"
               alt="QR Code"
               width={400}
               height={200}
